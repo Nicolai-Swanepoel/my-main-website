@@ -1,0 +1,474 @@
+/* -------------------------------------------------------- */
+/* BASIC SETUP */
+/* -------------------------------------------------------- */
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* -------- HEADINGS -------- */
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 10%;
+  margin-bottom: 20px;
+  color: #992900;
+  font-size: 240%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  text-align: center;
+  animation: text 3.5s 1;
+}
+
+@keyframes text {
+  0% {
+    color: #b93100;
+  }
+  30% {
+    color: #000000;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+  }
+  50% {
+    color: #b93100;
+  }
+  70% {
+    color: #b93100;
+  }
+}
+
+.heading-title {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+  color: #b23000;
+  animation: texty 4s infinite;
+  animation-delay: 2s;
+}
+
+@keyframes texty {
+  0% {
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* -------- PARAGRAPHS -------- */
+
+p {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+/* -------- HEADER -------- */
+
+header {
+  background: linear-gradient(
+      90deg,
+      rgba(255, 140, 0, 0.459) 4%,
+      rgba(196, 209, 8, 0.616) 53%,
+      rgba(255, 132, 0, 0.692) 100%
+    ),
+    url(img/sunset1.jpg);
+  background-size: cover;
+  overflow-y: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.hero-heading {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navigation {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.navigation li {
+  display: inline-block;
+  padding-left: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.navigation li a {
+  display: inline-block;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #333;
+}
+
+.navigation li a:link,
+.navigation li a:visited,
+.navigation li a:active {
+  display: inline-block;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.navigation li a:hover {
+  display: inline-block;
+  letter-spacing: 1px;
+  border-bottom: 2px solid orangered;
+  text-align: center;
+}
+
+/* -------- CONTACT FORM MODAL -------- */
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal__content {
+  width: 75%;
+  height: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  border-radius: 2em;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+/* -------- MY CONTACT FORM ------ */
+
+#nicolai-form {
+  display: block;
+}
+
+.nicform-body {
+  margin: 0;
+  font-family: -apple-system, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+  padding: 30px;
+  padding-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.nicform-h3 {
+  color: red;
+  padding-bottom: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.nicform-form-group {
+  margin-bottom: 1rem;
+}
+
+.nicform-input-group {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+
+.nicform-form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  outline: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.nicform-form-control:focus {
+  border: 1px solid #313131;
+}
+
+select.nicform-form-control[size],
+select.nicform-form-control[multiple] {
+  height: auto;
+}
+
+textarea.nicform-form-control {
+  font-family: -apple-system, Arial, sans-serif;
+  height: auto;
+}
+
+label.nicform-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.nicform-btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nicform-btn {
+    transition: none;
+  }
+}
+
+.nicform-btn:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
+.nicform-btn:focus,
+.nicform-btn.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.nicform-btn-primary {
+  color: #fff;
+  background-color: orangered;
+  border-color: #007bff;
+}
+
+.nicform-btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.nicform-btn-primary:focus,
+.nicform-btn-primary.focus {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.nicform-btn-lg,
+.nicform-btn-group-lg > .fcf-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.nicform-btn-block {
+  display: block;
+  width: 100%;
+}
+
+.nicform-btn-block + .fcf-btn-block {
+  margin-top: 0.5rem;
+}
+
+input[type="submit"].nicform-btn-block,
+input[type="reset"].nicform-btn-block,
+input[type="button"].nicform-btn-block {
+  width: 100%;
+}
+
+/* modal functionality */
+#modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal:target .modal__content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__close {
+  color: #363636;
+  font-size: 2em;
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+}
+
+.modal__heading {
+  color: orangered;
+  margin-bottom: 1em;
+}
+
+.modal__paragraph {
+  line-height: 1.5em;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+/* -------- HEADER ICONS -------- */
+
+.icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.icon-git,
+.icon-linkedin {
+  padding-top: 3rem;
+  font-size: 350%;
+  text-decoration: none;
+  color: #333;
+}
+
+.icon-linkedin {
+  color: #007bb5;
+}
+
+.icon:link,
+.icon:visited,
+.icon:active {
+  text-decoration: none;
+}
+
+.icon-link {
+  text-decoration: none;
+  color: rgb(206, 26, 26);
+}
+
+/* -------- PROJECTS -------- */
+
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.project-feature {
+  margin-bottom: 5px;
+}
+
+/* -------- FOOTER -------- */
+
+.footer {
+  background-color: #333;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+}
+
+.footerp {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 100%;
+  margin-top: 30px;
+}
+
+/* -------- VENDOR ANIMATIONS -------- */
+
+/* -------- typewriter h4 -------- */
+.typewriter h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-size: 120%;
+  color: #992900;
+  letter-spacing: 0.15em;
+  animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typewriter h4:hover {
+  color: orangered;
+}
+
+/* -------------------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* -------------------------------------------------------- */
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.box {
+  padding: 1%;
+}
