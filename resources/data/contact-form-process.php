@@ -5,7 +5,7 @@ to function correctly and send users input to my email --?>
 if (isset($_POST['Email'])) {
 
     // pointing to my email address where users input will get sent to 
-    $email_to = "Me@mydomain.com";
+    $email_to = "admin@nicswan.com";
     $email_subject = "Website inquiry";
 
     function problem($error)
