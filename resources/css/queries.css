@@ -1,6 +1,7 @@
 /* Big tablet to 1200px (widths smaller than the 1140px row) */
 @media only screen and (max-width: 1200px) {
     .row { padding: 0 2%; }
+
 }
 
 /* Small to large tablets: from 768 to 1023px */
@@ -8,6 +9,11 @@
     body { font-size: 18px; }
     section { padding: 60px 0; }
     .city-feature { font-size: 90%; }
+
+    .nicform-form {
+        display: grid;
+        grid-template-columns: auto;
+    }
 }
 
 /* Small phones to small tablets: from 481 to 767px */
@@ -21,6 +27,11 @@
     h1 { font-size: 180%; }
     h2 { font-size: 150%; }
     h3 { margin-bottom: 5px; }
+
+    .nicform-form {
+        display: grid;
+        grid-template-columns: auto;
+    }
 
     .projects-title {
       margin-bottom: 10px;
