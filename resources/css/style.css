@@ -233,6 +233,7 @@ header {
   color: red;
   display: block;
   text-align: center;
+  padding-top: 20px;
 }
 
 .nicform-form-group {

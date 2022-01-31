@@ -49,7 +49,7 @@
     }
 
     .modal__content {
-        width: 97%;
+        width: 100%;
         height: 88%;
         position: absolute;
         top: 50%;
@@ -62,4 +62,16 @@
         transition: all 0.5s;
       }
 
+    .nicform-form {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .project-item {
+        margin-top: 10px;
+    }
+
+    .back-button {
+        padding-top: 50px;
+    }
 }
